@@ -64,6 +64,7 @@ public class App {
         var difference = (age1 > age2)? age1 - age2 : age2 - age1;
         System.out.printf("The difference between ages is %s years apart\n ", difference);
 
+        System.out.println("Thanks for trying out my first program!");
         
     
     }
