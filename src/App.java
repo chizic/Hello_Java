@@ -30,8 +30,6 @@ public class App {
                 int birthYear = scanner.nextInt();
                 var age = baseYear - birthYear;
 
-
-                //System.out.println("You are "+ name +" and you are "+ age +" years old");
                 System.out.printf("Hello %s you are %s years old.\n\n", name, age);
 
             }
@@ -86,30 +84,18 @@ public class App {
                 else {System.out.println("invalid IMC");}
             }
             case 7 -> {
-                //List odd or even numbers between two numbers included in descending order.
-                System.out.println("Type a number");
-                var number1=scanner.nextInt();
-                System.out.println("Type a bigger number");
-                var number2  =scanner.nextInt();
-                System.out.println("Type 1 for even numbers\n Type 2 for odd numbers ");
-                var tipo = scanner.nextInt();
-                switch (tipo){
-                    case 1 ->{
-                        while (number2>=number1){
-                            if (number2%2==0){
-                                System.out.println(number2);
-                            }
-                            number2--;
-                        }
-                    }
-                    case 2 ->{
-                        while (number2>=number1){
-                            if (number2%2==1){
-                                System.out.println(number2);
-                            }
-                            number2--;
-                        }
-                    }
+                System.out.println("Type a number:");
+                int n1 = scanner.nextInt();
+                System.out.println("Type a bigger number:");
+                int n2 = scanner.nextInt();
+                System.out.println("Type 1 for even numbers, 2 for odd numbers:");
+                int tipo = scanner.nextInt();
+
+                int parity = (tipo == 1) ? 0 : 1; // 0 = even, 1 = odd
+                if (n2 % 2 != parity) n2--; // align to requested parity
+
+                for (int x = n2; x >= n1; x -= 2) {
+                    System.out.println(x);
                 }
             }
             case 8 ->{
@@ -123,10 +109,6 @@ public class App {
             }
             default -> System.out.println("Invalid option, please select a valid number.");
         }
-
-        
         System.out.println("Thanks for trying out my first program!");
-        
-    
     }
 }
