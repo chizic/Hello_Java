@@ -11,7 +11,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
-            Pick a number between 1 and 4 to select a program to run:
+            Pick a number between 1 and 8 to select a program to run:
             1 - Greet user and calculate age;
             2 - Calculate area of a square;
             3 - Calculate area of a rectangle;
@@ -74,19 +74,19 @@ public class App {
             }
             case 6 ->{
                 //Calculate IMC(IMC = weight/(height * height))
-                System.out.println("type weight (using coma in decimal form, eg. 75,2).");
+                System.out.println("Type weight (using coma in decimal form, eg. 75,2).");
                 var weight = scanner.nextDouble();
-                System.out.println("type height (using coma in decimal form eg 1,65).");
+                System.out.println("Type height (using coma in decimal form eg 1,65).");
                 var height = scanner.nextDouble();
                 var imc =weight/(height*height);
 
                 if (imc<=18.5){System.out.println("Underweight");}
                 else if (imc>=18.6&&imc<=24.9){System.out.println("Ideal weight");}
-                else if (imc>=25.0&&imc<=29.9){System.out.println("slightly over weight");}
+                else if (imc>=25.0&&imc<=29.9){System.out.println("Slightly over weight");}
                 else if (imc>=30.0&&imc<=34.9){System.out.println("Obesity 1");}
                 else if (imc>=35.0&&imc<=39.9){System.out.println("Obesity 2");}
                 else if (imc>=40){System.out.println("Obesity 3");}
-                else {System.out.println("invalid IMC");}
+                else {System.out.println("Invalid IMC");}
             }
             case 7 -> {
                 System.out.println("Type a number:");
