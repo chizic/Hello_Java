@@ -15,6 +15,7 @@ public class App {
             5 - Generate times-table for a given number.
             6 - Calculate IMC.
             7 - List odd or even numbers between two numbers.
+            8 - Input divisors of a given number.
             """);
 
         var option = scanner.nextInt();
@@ -109,6 +110,15 @@ public class App {
                             number2--;
                         }
                     }
+                }
+            }
+            case 8 ->{
+                System.out.println("Type the initial number:");
+                var initialNumber = scanner.nextInt();
+                var currentNumber = initialNumber;
+                while (currentNumber % initialNumber == 0 || currentNumber < initialNumber) {
+                    System.out.println("Type a divisor of the initial number or a less number to continue:");
+                    currentNumber = scanner.nextInt();
                 }
             }
             default -> System.out.println("Invalid option, please select a valid number.");
