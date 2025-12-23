@@ -14,6 +14,7 @@ public class App {
             4 - Calculate age difference between two people.
             5 - Generate times-table for a given number.
             6 - Calculate IMC.
+            7 - List odd or even numbers between two numbers.
             """);
 
         var option = scanner.nextInt();
@@ -84,7 +85,7 @@ public class App {
                 else {System.out.println("invalid IMC");}
             }
             case 7 -> {
-                //Calculate odd or even numbers between two numbers
+                //List odd or even numbers between two numbers included in descending order.
                 System.out.println("Type a number");
                 var number1=scanner.nextInt();
                 System.out.println("Type a bigger number");
@@ -99,7 +100,6 @@ public class App {
                             }
                             number2--;
                         }
-
                     }
                     case 2 ->{
                         while (number2>=number1){
