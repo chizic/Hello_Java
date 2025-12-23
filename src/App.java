@@ -3,7 +3,11 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        while (true){
+
+
+            System.out.println("----------Hello, World!----------\n");
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
@@ -16,6 +20,7 @@ public class App {
             6 - Calculate IMC.
             7 - List odd or even numbers between two numbers.
             8 - Input divisors of a given number.
+            0 - Exit program.
             """);
 
         var option = scanner.nextInt();
@@ -107,8 +112,16 @@ public class App {
                     currentNumber = scanner.nextInt();
                 }
             }
+            case 0 -> {
+                // Exit program
+                System.out.println("Exiting program...\nThanks for trying out my first program in Java!\n");
+                return;
+            }
             default -> System.out.println("Invalid option, please select a valid number.");
         }
-        System.out.println("Thanks for trying out my first program!");
-    }
+        System.out.println("Thanks for trying out my first program!\n");
+        
+    
+        }
+}
 }
